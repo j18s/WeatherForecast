@@ -1,0 +1,8 @@
+{
+    "base_url": "http://localhost:3000",
+    "weatherApi": "forecast.json",
+    "appid": "911da1c0dc741b320b0a094655fd2d58",
+    "city": "bangalore,in",
+    "unit": "metric",
+    "uid": 1100
+}

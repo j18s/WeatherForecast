@@ -1,5 +1,6 @@
 var supertest = require("supertest");
 var should = require("should");
+var helper = require("../helper/helper.js");
 
 // This agent refers to PORT where program is runninng.
 var base_url = "http://localhost:3000";
@@ -24,10 +25,7 @@ describe("Unit tests", function () {
 
     // #2 check config file exists
     it("check config file exists", function (done) {
-        let fs = require("fs");
-        let filePath = './config/config.json';
-        let contents = fs.readFileSync(filePath);
-        let jsonContent = JSON.parse(contents);
+        let contents = helper.getFileDetails('./json/test.json');
         contents.toString().length.should.greaterThan(0);
         done();
     });
