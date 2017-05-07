@@ -21,18 +21,28 @@ npm test
   * Supertest is a library written to test HTTP calls in node.js.
   
 
-### Run 
+### Run Application
 * Below command is running at the Azure Ubuntu Server:
 ~~~~
-npm start
+sudo npm start
 ~~~~
   * Internally `npm start` is doing two things. Setting up production environment variable and running the code.
   ~~~~
   NODE_ENV=production node ./bin/www
   ~~~~
-  * By default code sets NODE_ENV variable to `development`. Hence, to run locally change as below:
+  Note: sudo is required because production application is running at port 80 and it needs admin/root privileges.
+  
+  * By default code sets NODE_ENV variable to `development`. Hence, to run locally change start in package.json as below:
   ~~~~
   node ./bin/www
   ~~~~
   
-  
+### Info on application  
+* Used Express framework which did scafolding. 
+* Using a templating engine called PUG, you can review under Views folder.
+* Lodash.js is a utility library for helping in extracting data / mapping data for objects.
+
+### Implement with more time
+* I would love to implement 1-click deployment to production server.
+* Create a deploy user at the server, give permissions to deploy the code.
+* Install PM2 the process manager tool for running process.
