@@ -2,7 +2,7 @@ var _ = require('lodash');
 
 module.exports = {
     findKeyValue: function(data, key){
-        console.log(data);
+        //console.log(data);
         return _.result(data,key);
     },
     getFileDetails: function (filePath) {

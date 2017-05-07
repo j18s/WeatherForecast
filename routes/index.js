@@ -8,7 +8,7 @@ var configData = config.getConfig();
 process.env.PORT = helper.findKeyValue(configData, 'port');
 var base_url = helper.findKeyValue(configData, 'baseurl') + ':' + process.env.PORT;
 
-console.log(base_url);
+//console.log(base_url);
 /* GET home page. */
 
 router.get('/', function (req, res, next) {
